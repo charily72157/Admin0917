@@ -21,7 +21,7 @@ namespace Admin.Models
 
         }
         /// <summary>
-        /// 登入判斷
+        /// 登入判斷登入判斷登入判斷登入判斷
         /// </summary>
         /// <param name="username"></param>
         /// <param name="password"></param>
