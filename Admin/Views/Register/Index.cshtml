@@ -1,0 +1,88 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+<!DOCTYPE html>
+<html lang="en">
+@{
+    ViewBag.Title = "Home Page";
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Login V17</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+
+<!------ Include the above in your HEAD tag ---------->
+<style>
+    .form-horizontal {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+</style>
+
+<form class="form-horizontal" action="/Register/regcheck" method="POST">
+    <fieldset>
+        <div class="">
+            <h3>新增註冊會員</h3>
+        </div>
+
+
+        <div class="control-group">
+            <!-- Username -->
+            <label class="control-label" for="username">帳號</label>
+            <div class="controls">
+                <input type="text" id="username" name="username" placeholder="" class="input-xlarge">
+                <p class="help-block">Username can contain any letters or numbers, without spaces</p>
+            </div>
+        </div>
+
+        <div class="control-group">
+            <!-- Password-->
+            <label class="control-label" for="password">密碼</label>
+            <div class="controls">
+                <input type="password" id="password" name="password" placeholder="" class="input-xlarge">
+                <p class="help-block">Password should be at least 4 characters</p>
+            </div>
+        </div>
+
+        <div class="control-group">
+            <!-- Password -->
+            <label class="control-label" for="password_confirm">確認密碼</label>
+            <div class="controls">
+                <input type="password" id="password_confirm" name="password_confirm" placeholder="" class="input-xlarge">
+                <p class="help-block">Please confirm password</p>
+            </div>
+        </div>
+
+        <div class="control-group">
+            <!-- Username -->
+            <label class="control-label" for="username">姓名</label>
+            <div class="controls">
+                <input type="text" id="name" name="name" placeholder="" class="input-xlarge">
+                <p class="help-block"></p>
+            </div>
+        </div>
+
+        <div class="control-group">
+            <!-- E-mail -->
+            <label class="control-label" for="email">E-mail</label>
+            <div class="controls">
+                <input type="text" id="mail" name="mail" placeholder="" class="input-xlarge">
+                <p class="help-block">Please provide your E-mail</p>
+            </div>
+        </div>
+
+        <div class="control-group">
+            <!-- Button -->
+            <div class="controls">
+                <button type="submit" class="btn btn-success" href="@Url.Action("regcheck", "Register")">確認註冊</button>
+
+            </div>
+        </div>
+    </fieldset>
+    <img src="~/wwwroot/img/bg-01.jpg" class="rounded" alt="Cinque Terre" width="650">
+</form>
+</html>

@@ -1,0 +1,52 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Login V17</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<style>
+    .wrap-login100 {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    .btn-success {
+        margin:20px;
+    }
+</style>
+<body>
+        <div class="wrap-login100">
+            <form class="login100-form validate-form" action="/chen/login" method="POST">
+                <h3>管理員登入</h3>
+                <div class="control-group">
+                    <!-- Username -->
+                    <label class="control-label" for="username">帳號</label>
+                    <div class="controls">
+                        <input type="text" id="username" name="username" placeholder="" class="input-xlarge">
+                        <p class="help-block">Username can contain any letters or numbers, without spaces</p>
+                    </div>
+                </div>
+
+                <div class="control-group">
+                    <!-- Password-->
+                    <label class="control-label" for="password">密碼</label>
+                    <div class="controls">
+                        <input type="password" id="password" name="password" placeholder="" class="input-xlarge">
+                        <p class="help-block">Password should be at least 4 characters</p>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <!-- Button -->
+                    <div class="controls">
+                        <button type="submit" class="btn btn-success" href="@Url.Action("login", "chen")">登入</button>
+
+                        <input id="Button1" type="button" value="註冊" class="btn btn-success" onclick="location.href='@Url.Action("Index","Register")'" />
+                    </div>
+                </div>
+            </form>
+            <img src="~/wwwroot/img/bg-01.jpg" class="rounded" alt="Cinque Terre" width="650">
+        </div>
+</html>
